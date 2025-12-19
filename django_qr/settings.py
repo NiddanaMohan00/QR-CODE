@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$zg(4ruzad0okz7#iojr*-s5f@2*i1+!)db6sqlg&qbvoax2fo'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django_qr.onrender.com']
 
 
 # Application definition
@@ -98,7 +98,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+# mkvirtualenv  --python=/usr/bin/python3.10 mysite-virtualenv
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
