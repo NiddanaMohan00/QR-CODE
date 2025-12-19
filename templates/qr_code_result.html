@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generated</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+        }
+        .navbar {
+            background: transparent !important;
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #fff !important;
+            font-size: 1.3rem;
+        }
+        .result-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+            text-align: center;
+        }
+        .result-card h1 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .qr-img {
+            border: 2px dashed #dee2e6;
+            padding: 15px;
+            border-radius: 12px;
+            background: #f8f9fa;
+            max-width: 100%;
+        }
+        .btn-download {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-weight: 500;
+        }
+        .btn-download:hover {
+            opacity: 0.9;
+        }
+        .btn-next {
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer {
+            color: #e0e0e0;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container d-flex align-items-center justify-content-center" style="min-height: 80vh;">
+    <div class="col-md-6 col-lg-5">
+        <div class="result-card">
+            <h1>{{ res_name }}</h1>
+
+            <img src="{{ qr_url }}" alt="QR Code" class="qr-img mb-4">
+
+            <div class="d-grid gap-2">
+                <a href="{{ qr_url }}" download="{{ file_name }}" class="btn btn-download text-white">
+                    Download QR Code
+                </a>
+            </div>
+
+            <p class="mt-4 text-muted">Thank you for using our service ✨</p>
+
+            <a href="/" class="btn-next d-block mt-2">Generate another QR →</a>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center pb-3">
+© 2025 QR Generator • All Rights Reserved MOHAN NIDDANA ❤️.</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
